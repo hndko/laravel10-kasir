@@ -17,8 +17,8 @@
             <div class="sidebar-heading">
                 Data Master
             </div>
-            <li class="nav-item">
-                <a class="nav-link" href="">
+            <li class="nav-item {{ $title == 'Data Jenis Barang' ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('jenis-barang') }}">
                     <i class="fas fa-fw fa-file"></i>
                     <span>Jenis Barang</span></a>
             </li>
@@ -32,7 +32,7 @@
                     <i class="fas fa-fw fa-box"></i>
                     <span>Barang</span></a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item  {{ $title == 'Data User' ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('users') }}">
                     <i class="fas fa-fw fa-users"></i>
                     <span>Data User</span></a>
