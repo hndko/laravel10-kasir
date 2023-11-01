@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BarangController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\JenisBarangController;
 use App\Http\Controllers\UserController;
@@ -31,6 +32,11 @@ Route::group(['middleware' => ['auth', 'checkRole:admin']], function () {
     Route::post('/jenis-barang/store', [JenisBarangController::class, 'store'])->name('jenis-barang.store');
     Route::post('/jenis-barang/update/{id}', [JenisBarangController::class, 'update'])->name('jenis-barang.update');
     Route::delete('/jenis-barang/destroy/{id}', [JenisBarangController::class, 'destroy'])->name('jenis-barang.destroy');
+
+    Route::get('/barang', [BarangController::class, 'index'])->name('barang');
+    Route::post('/barang/store', [BarangController::class, 'store'])->name('barang.store');
+    Route::post('/barang/update/{id}', [BarangController::class, 'update'])->name('barang.update');
+    Route::delete('/barang/destroy/{id}', [BarangController::class, 'destroy'])->name('barang.destroy');
 });
 
 Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('auth');

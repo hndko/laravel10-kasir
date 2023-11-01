@@ -27,8 +27,8 @@
                     <i class="fas fa-fw fa-cogs"></i>
                     <span>Setting DIskon</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="">
+            <li class="nav-item  {{ $title == 'Data Barang' ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('barang') }}">
                     <i class="fas fa-fw fa-box"></i>
                     <span>Barang</span></a>
             </li>
