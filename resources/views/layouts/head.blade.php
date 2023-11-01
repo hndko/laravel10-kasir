@@ -3,6 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
 <meta name="author" content="">
+<meta name="csrf-token" content="{{ csrf_token() }}">
 <link href="{{ asset('assets/img/logo/logo.png') }}" rel="icon">
 <title>{{ $title }}</title>
 <link href="{{ asset('assets/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
@@ -13,3 +14,4 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css">
 <!-- Add this before your closing body tag -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="{{ asset('assets/vendor/jquery/jquery.min.js') }}"></script>
